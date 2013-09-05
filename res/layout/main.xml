@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>   
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:adsmogo="http://www.admogo.com"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_off_background">
+		<com.tclmid.app.FlshLight.FlashLightSurface
+		    android:id="@+id/surface_view"
+		    android:layout_width="320dp"
+		    android:layout_height="480dp"/>
+        
+        <com.tclmid.app.FlshLight.SlipButton
+            android:id="@+id/slipBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="145dip"
+            android:layout_marginTop="375dip" />
+        <com.adsmogo.adview.AdsMogoLayout
+			android:id="@+id/adsMogoView"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="0dp"
+			adsmogo:appid="jiangzhouq"
+			adsmogo:express_mode="false" />
+    </RelativeLayout>
+
+</LinearLayout>
