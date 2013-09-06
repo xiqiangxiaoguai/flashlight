@@ -12,6 +12,7 @@ import android.view.View;
 
 public class FlashLightActivity extends Activity implements OnChangedListener {
 
+    
 	private Vibrator mVibrator;
 	private FlashLightSurface mSurface; 
 	private static final String PRIVATE_FLASHLIGHT_NOTIFY_ACTION = "FLASHLIGHT_NOTIFICATION";
