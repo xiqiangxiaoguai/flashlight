@@ -26,9 +26,6 @@ public class FlashLightActivity extends Activity implements OnChangedListener {
 
 						boolean isFlashlightOn = mSurface.isFlashLightOn();
 
-						SlipButton myBtn = (SlipButton) findViewById(R.id.slipBtn);
-						myBtn.setButtonState(isFlashlightOn);
-
 						setBackGround(isFlashlightOn);
 					}
 			}
@@ -41,8 +38,6 @@ public class FlashLightActivity extends Activity implements OnChangedListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		SlipButton myBtn = (SlipButton) findViewById(R.id.slipBtn);
-		myBtn.SetOnChangedListener(this);
 		
 //		mSurface = (FlashLightSurface)findViewById(R.id.surface_view);
 		
@@ -57,9 +52,6 @@ public class FlashLightActivity extends Activity implements OnChangedListener {
 			if (mSurface != null) {
 				boolean isFlashlightOn = mSurface.isFlashLightOn();
 
-				SlipButton myBtn = (SlipButton) findViewById(R.id.slipBtn);
-				myBtn.setButtonState(isFlashlightOn);
-				setBackGround(isFlashlightOn);
 			}
 	}
 

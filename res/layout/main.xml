@@ -15,21 +15,36 @@
 		    android:id="@+id/surface_view"
 		    android:layout_width="320dp"
 		    android:layout_height="480dp"/>
-        
-        <com.tclmid.app.FlshLight.SlipButton
-            android:id="@+id/slipBtn"
+        <RelativeLayout 
+            android:id="@+id/back_ground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="145dip"
-            android:layout_marginTop="375dip" />
-        <com.adsmogo.adview.AdsMogoLayout
+            android:background="@android:color/black">
+            <ImageButton 
+                android:id="@+id/switch_button"
+                android:layout_height="360dp"
+                android:layout_width="360dp"
+                android:src="@drawable/switch_off"
+                android:background="@android:color/transparent"
+                android:layout_centerInParent="true"
+                />
+            <Switch 
+                android:id="@+id/mode_switch"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textOn="@string/flick"
+                android:textOff="@string/still_on"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    <!--     <com.adsmogo.adview.AdsMogoLayout
 			android:id="@+id/adsMogoView"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:layout_marginBottom="0dp"
 			adsmogo:appid="jiangzhouq"
-			adsmogo:express_mode="false" />
+			adsmogo:express_mode="false" /> -->
     </RelativeLayout>
 
 </LinearLayout>

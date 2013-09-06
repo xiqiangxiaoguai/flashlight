@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tclmid.app.FlshLight">
-    
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
 	<uses-permission android:name="android.permission.VIBRATE" />
 	
 	<!-- 连接网络权限INTERNET ，用于请求广告(必须)，mogo会使用该权限 -->
