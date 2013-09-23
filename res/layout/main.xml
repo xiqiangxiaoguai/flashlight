@@ -10,11 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:background="@drawable/bg_off_background">
-		<com.tclmid.app.FlshLight.FlashLightSurface
-		    android:id="@+id/surface_view"
-		    android:layout_width="320dp"
-		    android:layout_height="480dp"/>
+        android:background="@android:color/black">
         <RelativeLayout 
             android:id="@+id/back_ground"
             android:layout_width="match_parent"
@@ -22,8 +18,8 @@
             android:background="@android:color/black">
             <ImageButton 
                 android:id="@+id/switch_button"
-                android:layout_height="360dp"
-                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:src="@drawable/switch_off"
                 android:background="@android:color/transparent"
                 android:layout_centerInParent="true"
@@ -32,12 +28,24 @@
                 android:id="@+id/mode_switch"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:textOn="@string/flick"
-                android:textOff="@string/still_on"
+                android:textOn="@string/still_on"
+                android:textOff="@string/flick"
                 android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"/>
+                android:layout_alignParentBottom="true"
+                android:checked="true"
+                android:layout_marginBottom="120dp"
+                />
+            <ImageButton 
+                android:id="@+id/about"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_menu_notifications"
+                android:background="@android:color/transparent"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"/>
         </RelativeLayout>
-    <!--     <com.adsmogo.adview.AdsMogoLayout
+<!--      <com.adsmogo.adview.AdsMogoLayout
 			android:id="@+id/adsMogoView"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"

@@ -2,5 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, FlashLightActivity!</string>
-    <string name="app_name">FlashLight</string>
+    <string name="app_name">Simple FlashLight</string>
+    <string name="still_on">Constant</string>
+    <string name="flick">Flicker</string>
 </resources>

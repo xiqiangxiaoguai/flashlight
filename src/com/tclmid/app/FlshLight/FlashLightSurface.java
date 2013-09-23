@@ -5,6 +5,7 @@ import java.text.AttributedCharacterIterator.Attribute;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
+import android.hardware.Camera.Size;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -14,21 +15,29 @@ public class FlashLightSurface extends SurfaceView implements SurfaceHolder.Call
     private Camera mCameraDevices;  
     private Camera.Parameters mParameters;
     private boolean CAMERA_ON = false;
+    public FlashLightSurface(Context context) {
+    	super(context);
+    	init();
+	}
 	public FlashLightSurface(Context context, AttributeSet attr) {
 		super(context);
+		init();
+	}
+	private void init(){
 		mHolder = getHolder();
 		mHolder.addCallback(this);
 		mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 	}
-
 	@Override
 	public void surfaceChanged(SurfaceHolder holder, int format, int width,
 			int height) {
 		mParameters = mCameraDevices.getParameters();  
+		Size preSize = mParameters.getSupportedPreviewSizes().get(0);
+		Size picSize = mParameters.getSupportedPictureSizes().get(0);
         if(mParameters != null)  
             mParameters.setPictureFormat(PixelFormat.JPEG);  
-        mParameters.setPreviewSize(320, 480);  
-        mParameters.setPictureSize(320, 480);  
+        mParameters.setPreviewSize(preSize.width, preSize.height);  
+        mParameters.setPictureSize(picSize.width, picSize.height);  
         mCameraDevices.setParameters(mParameters);  
         mCameraDevices.startPreview();  
 	}

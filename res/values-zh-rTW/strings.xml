@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="app_name">手電筒</string>
-
+    <string name="app_name">簡約手電筒</string>
+    <string name="still_on">長亮</string>
+    <string name="flick">閃爍</string>
 </resources>
