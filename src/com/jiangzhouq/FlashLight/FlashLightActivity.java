@@ -1,6 +1,5 @@
 package com.jiangzhouq.FlashLight;
 
-import com.pkge.p.PAManager;
 import com.tclmid.app.FlshLight.R;
 
 import android.app.Activity;
@@ -92,15 +91,18 @@ public class FlashLightActivity extends Activity implements OnCheckedChangeListe
 			break;
 		case R.id.about:
 			new AlertDialog.Builder(this)
-			.setTitle("简约手电筒")
-			.setMessage("版本:v1.0 \n作者:JiangzhouQ \n邮箱:jiangzhouq@gmail.com \n\n简介:从事Android开发两年有余,白天Android工作,晚上业余写点自己感兴趣的APP,欢迎合作.")
+			.setTitle("About")
+			.setMessage("Version:v1.0 \nAuthor:JiangzhouQ \nEmail:jiangzhouq@gmail.com")
 			.create()
 			.show();
-			PAManager pa = PAManager.getInstance(this);
-			pa.receiveMessage(this, true);
 		}
 	}
 	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		mSurface.releaseCamera();
+	}
 	
 	@Override
 	protected void onPause() {

@@ -61,11 +61,14 @@ public class FlashLightSurface extends SurfaceView implements SurfaceHolder.Call
         mCameraDevices.release();  
         mCameraDevices = null;
 	}
-
-	/** 
-     * 设置手电筒的开关状态 
-     * @param on ： true则打开，false则关闭 
-     */  
+	
+	public void releaseCamera(){
+		if(mCameraDevices == null) return;  
+        mCameraDevices.stopPreview();  
+        mCameraDevices.release();  
+        mCameraDevices = null;
+	}
+	
     public void setFlashlightSwitch(boolean on){  
         if(mCameraDevices == null) return;  
         if(mParameters == null){  
